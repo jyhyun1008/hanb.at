@@ -1,0 +1,353 @@
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ridibatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #76b587;
+    --secondary-color: #255e34;
+    --bg-color: #f9fafb;
+    --btn-color: #eff1f3;
+    --card-bg: #ffffff;
+    --text-main: #111827;
+    --text-sub: #6b7280;
+    --radius: 20px; /* 웹앱 느낌의 큰 곡률 */
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Ridibatang';
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+    position: fixed;
+    top: 0; width: 100%; height: 64px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    /* backdrop-filter: blur(10px); */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.nav-content {
+    max-width: 1100px; margin: 0 auto; height: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-logo { font-weight: 800; font-size: 1.2rem; color: var(--text-main); text-decoration: none;}
+.nav-links a { margin-right: 20px; font-weight: 500; color: var(--text-sub); text-decoration: none;}
+.nav-links a:hover { color: var(--primary-color); }
+
+.nav-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.nav-social div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    overflow: hidden;
+}
+
+.nav-social a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: var(--radius);
+    width:100%;
+    aspect-ratio: 2;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero-header { margin-top: 64px; background: var(--card-bg); }
+.cover-image {
+    overflow: hidden;
+    height: 250px; background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.cover-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-area {
+    max-width: 1000px; margin: -50px auto 0;
+    padding: 0 20px 40px;
+    display: flex; align-items: flex-end; gap: 20px;
+}
+
+.profile-circle {
+    width: 140px; height: 140px;
+    background: #eee; border-radius: 30px; /* 완전 원형보다 모던한 스퀘어 라운드 */
+    border: 5px solid #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.profile-circle img {
+    width: 100%;
+}
+
+.profile-info h1 { 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    }
+
+.profile-info a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.profile-info p { color: var(--text-sub); margin-top: 0; margin-bottom: 0;}
+
+/* Grid Layout */
+.content-wrapper { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+.grid-container, .cate-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+	
+@media (max-width: 767px) {
+    .grid-container {
+        gap: 1px;
+    }
+
+    .cate-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-social {
+        gap: 3px;
+    }
+    
+    .nav-social a {
+        border-radius: 5px !important;
+        aspect-ratio: 1 ;
+    }
+
+    .modern-card, .modern-album {
+        border-radius: 5px !important;
+    }
+
+    .grid-container .link_post, .cate-container .link_post {
+        display: none;
+    }
+
+    .profile-info p {
+        font-size: 0.8rem;
+    }
+
+    /* 본문 레이아웃 */
+    .entry-content {
+        padding: 60px 20px !important;
+    }
+} 
+
+/* Modern Card Design */
+.modern-card {
+    aspect-ratio: 4 / 5;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.cate-card {
+    aspect-ratio: 2 / 3;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.modern-album {
+    aspect-ratio: 1;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.modern-card a,.cate-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+a.board-item {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.board-item .board-date {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+}
+
+/* 
+.modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+} */
+
+.card-thumb { aspect-ratio: 4 / 5; overflow: hidden; background: #f3f4f6; position: relative;}
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-body { padding: 20px; width: 100%; }
+.card-category { font-size: 0.75rem; color: var(--primary-color); font-weight: 700; text-transform: uppercase; }
+.card-title { font-size: 1.15rem; font-weight: 700; margin: 8px 0; white-space:nowrap; overflow: hidden; }
+.card-excerpt { 
+    font-size: 0.9rem; color: var(--text-sub); 
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.album-thumb { aspect-ratio: 1; overflow: hidden; background: #f3f4f6; position: relative;}
+.album-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.link_post {
+    width: 100%;
+    background-color: #00000099;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btn-more {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: var(--btn-color);
+    color: var(--text-sub);
+    text-decoration: none;
+    border-radius: var(--radius);
+    padding: 5px 15px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.card-footer { margin-top: 15px; border-top: 1px solid #f3f4f6; padding-top: 15px; font-size: 0.8rem; color: #999; }
+
+
+/* 본문 레이아웃 */
+.entry-content {
+    box-sizing: border-box;
+    max-width: 900px; /* 본문은 그리드보다 좁게 잡는 게 읽기 편해요 */
+    margin: 40px auto;
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.post-header { margin-bottom: 40px; text-align: center; }
+.post-category { color: var(--primary-color); font-weight: 700; font-size: 0.9rem; }
+.post-title { font-size: 2.5rem; font-weight: 800; margin-top: 10px; word-break: keep-all; color: var(--secondary-color);}
+.post-meta { color: var(--text-sub); font-size: 0.9rem; margin-top: 15px; }
+
+/* 실제 글 내용 스타일 (중요) */
+.article-view {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+.article-view img { max-width: 100%; height: auto; border-radius: 10px; }
+.article-view p { margin-bottom: 24px; }
+
+.modern-footer {
+    text-align: center;
+    color: var(--text-sub);
+}
+
+.cate-info {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cate-name {
+    color: black;
+    font-size: 1.7rem;
+}
+
+.list-name {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card-link {
+    color: black;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.cate-card .card-thumb {
+    aspect-ratio: 1 !important;
+}
+
+#tt-body-category article {
+    display: none;
+}

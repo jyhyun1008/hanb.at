@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>[##_page_title_##]</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+</head>
+<body id="[##_body_id_##]">
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">[##_title_##]</a>
+            <div class="nav-links">
+                <a href="/pages/about">프로젝트</a>
+                <a href="/pages/member">멤버</a>
+                <a href="/pages/links">링크</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-header">
+        <div class="cover-image">
+            <img src="https://i.imgur.com/1Y3ce5h.png" />
+            </div>
+        <div class="profile-area">
+            <div class="profile-circle">
+            <img src="[##_image_##]" />
+            </div>
+            <div class="profile-info">
+                <h1><a href="/">[##_title_##]</a></h1>
+                <p>[##_desc_##]</p>
+            </div>
+        </div>
+    </header>
+    <main class="content-wrapper">
+        <div class="main-content">
+
+            <div class="nav-social">
+                <a href="#" class="social-icon"><div class="social-item"><i class="lni lni-twitter-old"></i></div>
+                <a href="#" class="social-icon"><div class="social-item"><i class="lni lni-instagram"></i></div></a>
+                <a href="#" class="social-icon"><div class="social-item"><i class="lni lni-youtube"></i></div></a>
+                <a href="#" class="social-icon"><div class="social-item"><i class="lni lni-cart-1"></i></div></a>
+            </div>
+            
+          <s_list>
+            <div class="list-name" id="[##_list_style_##]">
+              <a class="cate-link" href="[##_list_rep_category_link_##]">
+                <div class="category-name">
+                  <div class="cate-info">
+                    <div class="cate-name">
+                        [##_list_conform_##] 
+                    </div>
+                      <div class="cate-count">
+                        [##_list_count_##] 개의 포스트가 있습니다.
+                      </div>
+                  </div>
+                  <div class="cate-desc">
+                    [##_list_description_##]
+                  </div>                 
+                </div>
+              </a>
+              <s_list_empty>
+                <div class="empty">
+                  아직 포스트가 없어요!
+                </div>
+              </s_list_empty>
+              <div class="cate-container">
+                <s_list_rep>
+                  <a class="card-link" href="[##_list_rep_link_##]">                  
+                    <div class="cate-card">
+                      <s_list_rep_thumbnail>
+                      <div class="card-thumb">
+                        <img src="[##_list_rep_thumbnail_##]">
+                      </div>
+                      </s_list_rep_thumbnail>
+                      <div class="card-body">
+                        <div class="card-title">[##_list_rep_title_##]</div>
+                        <div class="thumbnail-item">                        
+                          <div class="thumbnail-date">[##_list_rep_regdate_##]</div>
+                        </div>
+                      </div>                   
+                   </div>
+                  </a>
+                </s_list_rep>
+              </div>
+            </div>
+          </s_list>
+
+            <s_article_rep>
+            <article class="entry-content">
+                    <header class="post-header">
+                        <!--<span class="post-category">[##_article_rep_category_##]</span>-->
+                        <h1 class="post-title">[##_article_rep_title_##]</h1>
+                        <!--<div class="post-meta">
+                            <span>[##_article_rep_date_##]</span>
+                        </div>-->
+                    </header>
+                    
+                    <div class="article-view">
+                        [##_article_rep_desc_##] </div>
+
+                    <s_tag_label>
+                        <div class="post-tags">TAG: [##_tag_label_rep_##]</div>
+                    </s_tag_label>
+                </article>
+            </s_article_rep>
+
+        <s_cover_group>
+                <s_cover_rep>
+                <s_cover name="grid-gallery">
+                <div>
+                    <h2 class="section-title">🌳 [##_cover_title_##]</h2>
+                    <div class="grid-container">
+                    <s_cover_item>
+                        <div class="modern-card">
+                            <s_cover_item_thumbnail>
+                                <a href="[##_cover_item_url_##]" class="thumbnail_post card-thumb">
+                                    <img src="[##_cover_item_thumbnail_##]" />
+
+                                    <div class="link_post">
+                                        <strong class="tit_post">[##_cover_item_title_##]</strong>
+                                        <p class="txt_post">[##_cover_item_summary_##]</p>
+                                    </div>
+                                </a>
+                            </s_cover_item_thumbnail>
+                        </div>
+
+                    </s_cover_item>
+                    </div>
+
+                    <s_cover_url>
+                    <a class="btn-more" href="[##_cover_url_##]">더보기</a>
+                    </s_cover_url>
+                </div>
+                </s_cover>
+
+                <s_cover name="grid-albumcover">
+                <div>
+                    <h2 class="section-title">🌳 [##_cover_title_##]</h2>
+                    <div class="grid-container">
+                    <s_cover_item>
+                        <div class="modern-album">
+                            <s_cover_item_thumbnail>
+                                <a href="[##_cover_item_url_##]" class="thumbnail_post album-thumb">
+                                    <img src="[##_cover_item_thumbnail_##]" />
+                                </a>
+                            </s_cover_item_thumbnail>
+                        </div>
+
+                    </s_cover_item>
+                    </div>
+
+                    <s_cover_url>
+                    <a class="btn-more" href="[##_cover_url_##]">더보기</a>
+                    </s_cover_url>
+                </div>
+                </s_cover>
+
+                <s_cover name="list-board">
+                    <div class="cover-section">
+                        <h2 class="section-title">🌳 [##_cover_title_##]</h2>
+                        <div class="list-container">
+                            <s_cover_item>
+                                <a href="[##_cover_item_url_##]" class="board-item">
+                                    <s_cover_item_article_info>
+                                        <div class="board-title">[##_cover_item_title_##]</div>
+                                        <div class="board-date">[##_cover_item_date_##]</div>
+                                    </s_cover_item_article_info>
+                                </a>
+                            </s_cover_item>
+                        </div>
+
+                        <s_cover_url>
+                        <a class="btn-more" href="[##_cover_url_##]">더보기</a>
+                        </s_cover_url>
+                    </div>
+                </s_cover>
+
+            </s_cover_rep>
+        </s_cover_group>
+        </div>
+    </main>
+
+    <footer class="modern-footer">
+        <p>© [##_year_##] [##_blogger_##]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
